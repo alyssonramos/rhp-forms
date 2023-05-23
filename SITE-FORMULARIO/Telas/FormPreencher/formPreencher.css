@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /*  corpo da página */
+  body {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #f2f2f2;
+  
+  }
+
+  .navbar {
+    background-color: white !important;
+    text-align: center !important;
+    padding: 1%;
+  }
+
+  .info {
+    background-color: #047857;
+    text-align: center !important;
+    color:#f2f2f2;
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+    font-size: 75%;
+  }
+
+  .info b {
+    text-transform: uppercase;
+    color:white !important;
+  }
+
+
+  /* Inputs */
+  .dadosPaciente{
+    margin: 5% auto;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
+    color: #013326;
+    background-color: #ffffff;
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+  }
+
+
+  .perguntas{
+    margin: 5% auto;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
+    color: #013326;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+
+  }
+
+.perguntas .formulario {
+    padding-top: 5%;
+}
+input[type=text] {
+    font-weight: 300;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);
+  }
+
+  input[type=date] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  
+input[type=text]:focus {
+    background-color: #0abb893b;
+    
+  }
+
+
+  
+ /* footer */
+ .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #047857;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer button {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 17px;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+ }
+ .footer button:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+ }
+ 
+ .footer button:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+ }
+ .footer button:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+ }
+ 
+ .footer button:focus {
+  outline: 1px transparent;
+ }
+ .footer button:before {
+  display: none;
+ }
+ .footer button:-webkit-details-marker {
+  display: none;
+ }

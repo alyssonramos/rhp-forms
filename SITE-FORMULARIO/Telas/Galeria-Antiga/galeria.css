@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #eee;
+}
+header{
+    height: 150px;
+    display: flex;
+    Justify-content: center;
+    align-items: center;
+}
+header h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #000;
+}
+.galeria-modelos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+    padding: 0 1vm;
+}
+.galeria-item{
+    width: 340px;
+    height: 250px;
+    border: 10px solid #FFF;
+    box-shadow: 5p 5px 5px #0006;
+    transition: transform 0.2s linear;
+    text-align: center;
+}
+.galeria-item img{
+    width: 80%;
+    height: 90%;
+    object-fit: cover;
+    padding-top: 20px;
+}
+.galeria-item:hover{
+    transform: scale(1.2);
+}
+footer{
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-style: italic;
+}
+.galeria-logo{
+    border: solid #ffffff;
+    background: #ffffff;
+    padding: 0.5px;
+    text-align: center;
+    height: 230px
+}

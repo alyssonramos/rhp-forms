@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formPreencher.css">
+    <!--Fontes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <title>Preenchimento de formulário</title>
+</head>
+<body>
+
+<!--Navbar-->
+<nav class="navbar">
+    <div class="container">
+        <p>
+        <img src="https://rhp.com.br/wp-content/uploads/2021/08/logo-rhp-horizontal.svg"
+          alt="logo">
+        </p>
+    </div>
+</nav>
+<div class="info">
+    <h2><b>Título: </b> Lorem impsum</h2>
+    <h2><b>código: </b> 123-456-789</h2>
+    <h2><b>tipo: </b> Formulário(FO)</h2>
+    <h2><b>Localização: </b> Lorem impsum</h2>
+</div>
+
+
+<div class="dadosPaciente">
+    <div class="container">
+        <h2>Insira seus dados</h2>
+    </div>
+    <div class="formulario">
+        <input type="text" name="nome" placeholder="Nome">
+        <input type="text" name="idade" placeholder="Idade">
+        <input type="text" name="Sexo" placeholder="Sexo">
+        <input type="text" name="Peso" placeholder="Peso(Kg)">
+        <input type="text" placeholder="Data de nascimento"
+                    onfocus="(this.type='date')">
+        <input type="text" name="Registro" placeholder="Registro">
+          </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="perguntas">
+    <div class="container">
+        <h2>Pergunta 01</h2>
+    </div>
+    <div class="formulario">
+        <label>
+          <input type="radio" name="resposta" value="sim"> Sim
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="nao"> Não
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="outro" onclick="mostrarCampoTexto(this)"> Outro
+        </label>
+        <div class="campoTexto" style="display: none;">
+            <input type="text" name="text" class="input" placeholder="Qual?">
+          </div>
+    </div>
+</div>
+
+<div class="perguntas">
+    <div class="container">
+        <h2>Pergunta 02</h2>
+    </div>
+    <div class="formulario">
+        <label>
+          <input type="radio" name="resposta" value="sim"> Sim
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="nao"> Não
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="outro" onclick="mostrarCampoTexto(this)"> Outro
+        </label>
+        <div class="campoTexto" style="display: none;">
+            <input type="text" name="text" class="input" placeholder="Qual?">
+          </div>
+    </div>
+</div>
+
+<div class="perguntas">
+    <div class="container">
+        <h2>Pergunta 03</h2>
+    </div>
+    <div class="formulario">
+        <label>
+          <input type="radio" name="resposta" value="sim"> Sim
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="nao"> Não
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="outro" onclick="mostrarCampoTexto(this)"> Outro
+        </label>
+        <div class="campoTexto" style="display: none;">
+            <input type="text" name="text" class="input" placeholder="Qual?">
+          </div>
+    </div>
+</div>
+
+<div class="perguntas">
+    <div class="container">
+        <h2>Pergunta 04</h2>
+    </div>
+    <div class="formulario">
+        <label>
+          <input type="radio" name="resposta" value="sim"> Sim
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="nao"> Não
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="outro" onclick="mostrarCampoTexto(this)"> Outro
+        </label>
+        <div class="campoTexto" style="display: none;">
+            <input type="text" name="text" class="input" placeholder="Qual?">
+          </div>
+    </div>
+</div>
+
+<div class="perguntas">
+    <div class="container">
+        <h2>Pergunta 05</h2>
+    </div>
+    <div class="formulario">
+        <label>
+          <input type="radio" name="resposta" value="sim"> Sim
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="nao"> Não
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="outro" onclick="mostrarCampoTexto(this)"> Outro
+        </label>
+        <div class="campoTexto" style="display: none;">
+            <input type="text" name="text" class="input" placeholder="Qual?">
+          </div>
+    </div>
+</div>
+
+<div class="perguntas">
+    <div class="container">
+        <h2>Pergunta 06</h2>
+    </div>
+    <div class="formulario">
+        <label>
+          <input type="radio" name="resposta" value="sim"> Sim
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="nao"> Não
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="outro" onclick="mostrarCampoTexto(this)"> Outro
+        </label>
+        <div class="campoTexto" style="display: none;">
+            <input type="text" name="text" class="input" placeholder="Qual?">
+          </div>
+    </div>
+</div>
+
+<div class="perguntas">
+    <div class="container">
+        <h2>Pergunta 07</h2>
+    </div>
+    <div class="formulario">
+        <label>
+          <input type="radio" name="resposta" value="sim"> Sim
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="nao"> Não
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="outro" onclick="mostrarCampoTexto(this)"> Outro
+        </label>
+        <div class="campoTexto" style="display: none;">
+            <input type="text" name="text" class="input" placeholder="Qual?">
+          </div>
+    </div>
+</div>
+
+<div class="footer">
+  <a class="nav-link" href="../Pos_formulario/pos_form.html">
+  <button>Enviar formulário</button>
+  </a>
+</div>
+
+<script src="formPreencher.js"></script>
+</body>
+</html>

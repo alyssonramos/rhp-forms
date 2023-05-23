@@ -1,0 +1,140 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+
+
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  
+  .rating {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .rating input[type="radio"] {
+    display: none;
+  }
+  
+  .rating label {
+    flex: 1;
+    height: 30px;
+    margin: 0 2px;
+    border-radius: 0;
+    cursor: pointer;
+    transition: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+  
+  #rating-0 + label {
+    background-color: #FF0000;
+  }
+  
+  #rating-1 + label {
+    background-color: #FF3300;
+  }
+  
+  #rating-2 + label {
+    background-color: #FF6600;
+  }
+  
+  #rating-3 + label {
+    background-color: #FF9900;
+  }
+  
+  #rating-4 + label {
+    background-color: #FFCC00;
+  }
+  
+  #rating-5 + label {
+    background-color: #FFFF00;
+  }
+  
+  #rating-6 + label {
+    background-color: #CCFF00;
+  }
+  
+  #rating-7 + label {
+    background-color: #99FF00;
+  }
+  
+  #rating-8 + label {
+    background-color: #66FF00;
+  }
+  
+  #rating-9 + label {
+    background-color: #33FF00;
+  }
+  
+  #rating-10 + label {
+    background-color: #00FF00;
+  }
+  
+  input[type="submit"] {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5%;
+    position: relative;
+    top: 50%; left: 50%;
+    transform: translate(-50%);
+
+    
+  }
+  .LOGO{
+    text-align: center;
+  }
+
+  #comentario {
+    border-radius: 2px;
+  }
+  .container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    width:  50% ;
+    height: 100%;
+    padding: 15px;
+    position: relative;
+    top: 50%; left: 50%;
+    transform: translate(-50%, 50%);
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.26);
+  }
