@@ -85,6 +85,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 5% 20%;
+  width: 100%;
 }
 .Login_user {
   display: flex;
@@ -92,6 +93,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 5%;
+  width: 100%;
 }
 
 .Login_senha {
@@ -99,11 +101,18 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .input-group {
   position: relative;
-  width: 30em;
+  width: 50vh;
+}
+
+@media (max-width: 600px) {
+    .input-group {
+        width: 30vh;
+      }
 }
 
 .input {
@@ -129,7 +138,7 @@ body {
 .input:focus,
 input:valid {
   outline: none;
-  border: 1.5px solid #1a73e8;
+  border: 1.5px solid #10B981;
 }
 
 .input:focus ~ label,
@@ -137,7 +146,7 @@ input:valid ~ label {
   transform: translateY(-50%) scale(0.8);
   background-color: #fff;
   padding: 0 0.2em;
-  color: #2196f3;
+  color: #10B981;
 }
 
 .user{
