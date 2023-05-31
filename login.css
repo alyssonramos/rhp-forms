@@ -48,7 +48,7 @@ body {
 }
 
 .Top_card h3 {
-  margin: 5%;
+  margin: 10%;
   font-weight: medium;
   width: 164px;
   height: 30px;
@@ -84,7 +84,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5% 20%;
+  margin: 0% 20%;
   width: 100%;
 }
 .Login_user {
@@ -150,11 +150,20 @@ input:valid ~ label {
 }
 
 .user{
-  color: #047857;
+  color: #000;
   margin-right: 5%;
+  transition: all 1s ease;
 }
 
 .lock {
-  color: #047857;
+  color: #000;
   margin-right: 5%;
+  transition: all 1s ease;
 }
+
+.bi-person {
+    transition: all 0.5s ease;
+  }
+.bi-file-lock2{
+    transition: all 0.5s ease;
+  }

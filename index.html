@@ -70,7 +70,7 @@
               autocomplete="off"
               class="input"
             />
-            <label class="user-label">First Name</label>
+            <label class="user-label">Matrícula</label>
           </div>
         </div>
         <div class="Login_senha">
@@ -97,9 +97,9 @@
               type="text"
               name="text"
               autocomplete="off"
-              class="input"
+              class="input input2"
             />
-            <label class="user-label">First Name</label>
+            <label class="user-label">Senha</label>
           </div>
         </div>
       </div>
@@ -108,5 +108,24 @@
         <button class="btnLogin">Enviar</button>
       </a>
     </div>
+    <script>
+        window.onload = function(){
+            document.querySelector('.input').addEventListener('focus', function() {
+                document.querySelector('.bi-person').style.fill = "#10B981";
+            });
+    
+            document.querySelector('.input').addEventListener('blur', function() {
+                document.querySelector('.bi-person').style.fill = "currentColor";
+            });
+
+            document.querySelector('.input2').addEventListener('focus', function() {
+                document.querySelector('.bi-file-lock2').style.fill = "#10B981";
+            });
+    
+            document.querySelector('.input2').addEventListener('blur', function() {
+                document.querySelector('.bi-file-lock2').style.fill = "currentColor";
+            });
+        }
+    </script>
   </body>
 </html>
