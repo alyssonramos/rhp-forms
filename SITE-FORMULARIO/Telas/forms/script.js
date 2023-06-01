@@ -25,3 +25,38 @@ function adicionarFormulario(botao) {
 
   contador++; // Incrementa o contador para a próxima pergunta
 }
+
+
+//Validação do formulário
+
+
+// Seleciona o botão "Enviar formulário"
+const enviarFormularioBtn = document.querySelector(".footer button");
+
+// Adiciona um manipulador de evento ao botão "Enviar formulário"
+enviarFormularioBtn.addEventListener("click", function(event) {
+  event.preventDefault(); // Impede o comportamento padrão do botão (enviar o formulário)
+
+  // Seleciona todos os campos de entrada de texto no formulário
+  const camposTexto = document.querySelectorAll(".perguntas input[type='text']");
+
+  // Verifica se algum campo de texto está vazio
+  let camposVazios = false;
+  camposTexto.forEach(function(campo) {
+    if (campo.value === "") {
+      camposVazios = true;
+    }
+  });
+
+  // Se houver campos vazios, exibe uma mensagem de erro
+  if (camposVazios) {
+    alert("Por favor, preencha todos os campos antes de enviar o formulário.");
+  } else {
+    // Se todos os campos estiverem preenchidos, você pode redirecionar para a próxima página
+    // ou executar outra ação desejada
+    alert("Formulário enviado com sucesso!");
+     window.location.href = "formEnviado.html"; // Redireciona para a próxima página
+  }
+});
+
+
