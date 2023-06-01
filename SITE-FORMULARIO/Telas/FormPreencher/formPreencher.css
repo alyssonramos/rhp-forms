@@ -206,6 +206,13 @@ input[type=text]:focus {
   height: 370px;
 }
 
+@media (max-width: 750px) {
+  .modal-show > .modal {
+    width: 400px;
+    height: 430px;
+  }
+}
+
 .modal-show {
   opacity: 1;
   pointer-events: auto;
