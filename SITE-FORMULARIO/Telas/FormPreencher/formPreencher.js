@@ -36,3 +36,20 @@ container.addEventListener('click', (event) => {
 	
 	closeModal();
 });
+
+
+function validateForm() {
+  // Get all input elements within the form
+  var inputs = document.getElementById("myForm").getElementsByTagName("input");
+
+  // Loop through each input and check if it is empty
+  for (var i = 0; i < inputs.length; i++) {
+    if (inputs[i].value === "") {
+      alert("Please fill in all fields.");
+      return false;
+    }
+  }
+
+  // If all fields are filled, allow form submission
+  return true;
+}
