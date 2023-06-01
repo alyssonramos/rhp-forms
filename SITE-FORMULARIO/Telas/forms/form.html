@@ -1,73 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="button.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
     <!--Fontes-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap" rel="stylesheet">
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Preenchimento de formulário</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar">
+      <div class="container-fluid position-relative">
+        <!--Logo-->
+        <a href="../home/home.html">
+          <img
+            src="https://rhp.com.br/wp-content/uploads/2021/08/logo-rhp-horizontal.svg"
+            class="float-start logo"
+            alt="logo"
+          />
+        </a>
 
-<!--Navbar-->
-<div class="navbar">
-  <a href="../home/home.html">
-  <button>
-    <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
-      <path
-        d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z">
-      </path>
-    </svg>
-  </button>
-</a>
-  <img src="../../images/logoHorizontal.png" class=" float-start" alt="logo" width="350px" height="100%">
-</div>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <ion-icon name="menu-outline"></ion-icon>
+        </label>
 
-<div class="dadosPaciente">
-    <div class="container">
+        <ul>
+          <li id="home">
+            <a href="../home/home.html">Home </a>
+          </li>
+          <li>
+            <a href="../Galeria/galeria.html">Galeria de formulários </a>
+          </li>
+          <li id="sair">
+            <a href="../../../index.html">Sair </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Fim Navbar-->
+
+    <div class="dadosPaciente">
+      <div class="container">
         <h2>Insira aqui o título</h2>
-    </div>
-        <input type="text" name="nome" placeholder="Título">
-          <div class="informacoes">
-            <h2>Deseja informações pessoais?</h2>
-          </div>
-          <div class="formulario">
-              <label>
-                <input type="radio" name="resposta" value="sim"> Sim
-              </label>
-              <label>
-                <input type="radio" name="resposta" value="nao"> Não
-              </label>
-          </div>
+      </div>
+      <input type="text" name="nome" placeholder="Título" />
+      <div class="informacoes">
+        <h2>Deseja informações pessoais?</h2>
+      </div>
+      <div class="formulario">
+        <label> <input type="radio" name="resposta" value="sim" /> Sim </label>
+        <label> <input type="radio" name="resposta" value="nao" /> Não </label>
+      </div>
     </div>
 
-<div class="perguntas">
-  <div class="container">
-    <h2>Pergunta 1</h2>
-</div>
-  <input type="text" name="text" class="input" placeholder="Insira a pergunta:">
-  <button onclick="adicionarFormulario(this)">Adicionar</button>
-</div>
+    <div class="perguntas">
+      <div class="container">
+        <h2>Pergunta 1</h2>
+      </div>
+      <input
+        type="text"
+        name="text"
+        class="input"
+        placeholder="Insira a pergunta:"
+      />
+      <button onclick="adicionarFormulario(this)">Adicionar</button>
+    </div>
 
+    <div class="footer">
+      <a class="nav-link">
+        <button>Enviar formulário</button>
+      </a>
+    </div>
+    
+      <div>
+        <p>
+          .
+        </p>
+      </div>
 
-<div class="footer">
-  <a class="nav-link" href="formEnviado.html">
-  <button>Enviar formulário</button>
-  </a>
-</div>
+      <div class="modal-container">
+        <div class="modal">
+          <p>
+            Compartilhar formulário via:
+          </p>
+          <div class="vias">
+          <p>
+            <div class="whatsapp">
+            <a href="./../FormPreencher/formPreencher.html" class="btn btn-primary">
+            <img src="../../images/whatsapp-icone-2.png" width="50%">
+            </a>
+            </div>
+          </p>
+          <p>
+            <div class="gmail">
+              <a href="./../FormPreencher/formPreencher.html" class="btn btn-primary">
+                <img src="../../images/gmail.png" width="50%">
+              </a>
+            </div>
+          </p>
+          </div>
+        </div>
+      </div>
 
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
