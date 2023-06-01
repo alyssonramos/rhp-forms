@@ -47,7 +47,7 @@ const openModal = () => {
 
   // Se houver campos vazios, exibe uma mensagem de erro
   if (camposVazios) {
-    alert("Por favor, preencha todos os campos antes de abrir o modal.");
+    alert("Por favor, preencha todos os campos antes de enviar o formulário");
   } else {
     container.classList.add(activeModalClass);
   }
