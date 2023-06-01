@@ -34,7 +34,25 @@ const modal = getElement('.modal');
 
 const activeModalClass = 'modal-show';
 
-const openModal = () => container.classList.add(activeModalClass);
+const openModal = () => {
+  // Verifica se todos os campos de texto estão preenchidos
+  const camposTexto = document.querySelectorAll(".perguntas input[type='text']");
+  let camposVazios = false;
+
+  camposTexto.forEach(function(campo) {
+    if (campo.value === "") {
+      camposVazios = true;
+    }
+  });
+
+  // Se houver campos vazios, exibe uma mensagem de erro
+  if (camposVazios) {
+    alert("Por favor, preencha todos os campos antes de abrir o modal.");
+  } else {
+    container.classList.add(activeModalClass);
+  }
+};
+
 const closeModal = () => container.classList.remove(activeModalClass);
 
 button.addEventListener('click', openModal);
@@ -43,3 +61,27 @@ container.addEventListener('click', (event) => {
 	
 	closeModal();
 });
+
+
+//Validação do formulário
+
+
+// Seleciona o botão "Enviar formulário"
+const enviarFormularioBtn = document.querySelector(".footer button");
+
+// Adiciona um manipulador de evento ao botão "Enviar formulário"
+enviarFormularioBtn.addEventListener("click", function(event) {
+  event.preventDefault(); // Impede o comportamento padrão do botão (enviar o formulário)
+
+  // Seleciona todos os campos de entrada de texto no formulário
+  const camposTexto = document.querySelectorAll(".perguntas input[type='text']");
+
+  // Verifica se algum campo de texto está vazio
+  let camposVazios = false;
+  camposTexto.forEach(function(campo) {
+    if (campo.value === "") {
+      camposVazios = true;
+    }
+  });
+});
+
