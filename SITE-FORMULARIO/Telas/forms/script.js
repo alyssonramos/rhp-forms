@@ -26,37 +26,20 @@ function adicionarFormulario(botao) {
   contador++; // Incrementa o contador para a próxima pergunta
 }
 
+const getElement = (...queries) => document.querySelector(...queries);
 
-//Validação do formulário
+const button = getElement('.nav-link');
+const container = getElement('.modal-container');
+const modal = getElement('.modal');
 
+const activeModalClass = 'modal-show';
 
-// Seleciona o botão "Enviar formulário"
-const enviarFormularioBtn = document.querySelector(".footer button");
+const openModal = () => container.classList.add(activeModalClass);
+const closeModal = () => container.classList.remove(activeModalClass);
 
-// Adiciona um manipulador de evento ao botão "Enviar formulário"
-enviarFormularioBtn.addEventListener("click", function(event) {
-  event.preventDefault(); // Impede o comportamento padrão do botão (enviar o formulário)
-
-  // Seleciona todos os campos de entrada de texto no formulário
-  const camposTexto = document.querySelectorAll(".perguntas input[type='text']");
-
-  // Verifica se algum campo de texto está vazio
-  let camposVazios = false;
-  camposTexto.forEach(function(campo) {
-    if (campo.value === "") {
-      camposVazios = true;
-    }
-  });
-
-  // Se houver campos vazios, exibe uma mensagem de erro
-  if (camposVazios) {
-    alert("Por favor, preencha todos os campos antes de enviar o formulário.");
-  } else {
-    // Se todos os campos estiverem preenchidos, você pode redirecionar para a próxima página
-    // ou executar outra ação desejada
-    alert("Formulário enviado com sucesso!");
-     window.location.href = "formEnviado.html"; // Redireciona para a próxima página
-  }
+button.addEventListener('click', openModal);
+container.addEventListener('click', (event) => {
+	if (modal.contains(event.target)) return;
+	
+	closeModal();
 });
-
-

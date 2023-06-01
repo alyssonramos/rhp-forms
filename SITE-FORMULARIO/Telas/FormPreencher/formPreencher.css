@@ -26,12 +26,24 @@
     display: flex;
     justify-content: space-around;
     padding: 1%;
-    font-size: 75%;
+    font-size: 60%;
   }
-
+  @media (max-width: 650px) {
+    .info{
+      font-size: 40%;
+    }
+  }
+  .info h2 {
+    border-right: #00000028 solid 0.5px;
+    width: 30%;
+  }
+  .info h2:last-of-type{
+    border-right: none
+  }
   .info b {
     text-transform: uppercase;
     color:white !important;
+
   }
 
 
@@ -154,3 +166,230 @@ input[type=text]:focus {
  .footer button:-webkit-details-marker {
   display: none;
  }
+
+ .modal-container {
+  background: rgba(0, 0, 0, 0.2);
+  
+  width: 100%;
+  height: 100vh;
+  
+  position: fixed;
+  left: 0;
+  top: 0;
+  
+  display: grid;
+  place-items: center;
+  
+  opacity: 0;
+  pointer-events: none;
+  
+  transition: opacity 0.15s;
+}
+
+.modal {
+  background: #fff;
+  
+  width: 0;
+  height: 0;
+  
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 #00000070;
+
+  overflow: hidden;
+  
+  transition: width 0.15s, height 0.15s;
+}
+
+.modal-show > .modal {
+  width: 600px;
+  height: 370px;
+}
+
+@media (max-width: 750px) {
+  .modal-show > .modal {
+    width: 400px;
+    height: 430px;
+  }
+}
+
+.modal-show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal h1 {
+  text-align: center;
+}
+
+.modal form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.modal label {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+}
+
+.modal input[type="text"],
+.modal input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.rating {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.rating input[type="radio"] {
+  display: none;
+}
+
+.rating label {
+  flex: 1;
+  height: 30px;
+  margin: 0 2px;
+  border-radius: 0;
+  cursor: pointer;
+  transition: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+#rating-0 + label {
+  background-color: #FF0000;
+}
+
+#rating-1 + label {
+  background-color: #FF3300;
+}
+
+#rating-2 + label {
+  background-color: #FF6600;
+}
+
+#rating-3 + label {
+  background-color: #FF9900;
+}
+
+#rating-4 + label {
+  background-color: #FFCC00;
+}
+
+#rating-5 + label {
+  background-color: #FFFF00;
+}
+
+#rating-6 + label {
+  background-color: #CCFF00;
+}
+
+#rating-7 + label {
+  background-color: #99FF00;
+}
+
+#rating-8 + label {
+  background-color: #66FF00;
+}
+
+#rating-9 + label {
+  background-color: #33FF00;
+}
+
+#rating-10 + label {
+  background-color: #00FF00;
+}
+
+
+/*---------------Hover colors---------------*/
+
+
+#rating-0 + label:hover {
+  background-color: #FF0000;
+  box-shadow: 0 0 5px 0 #00000070;
+}
+
+#rating-1 + label:hover {
+  background-color: #FF3300;
+  box-shadow: 0 0 5px 0 #00000070;
+}
+
+#rating-2 + label:hover {
+  background-color: #FF6600;
+  box-shadow: 0 0 5px 0 #00000070;
+}
+
+#rating-3 + label:hover {
+  background-color: #FF9900;
+  box-shadow: 0 0 5px 0 #00000070;
+}
+
+#rating-4 + label:hover {
+  background-color: #FFCC00;
+  box-shadow: 0 0 5px 0 #00000070;
+}
+
+#rating-5 + label:hover {
+  background-color: #FFFF00;
+  box-shadow: 0 0 5px 0 #00000070;
+}
+
+#rating-6 + label:hover {
+  background-color: #CCFF00;
+  box-shadow: 0 0 5px 0 #00000070;
+}
+
+#rating-7 + label:hover {
+  background-color: #99FF00;
+  box-shadow: 0 0 5px 0 #00000070;
+}
+
+#rating-8 + label:hover{
+  background-color: #66FF00;
+  box-shadow: 0 0 5px 0 #00000070;
+}
+
+#rating-9 + label:hover {
+  background-color: #33FF00;
+  box-shadow: 0 0 5px 0 #00000070;
+}
+
+#rating-10 + label:hover {
+  background-color: #00FF00;
+  box-shadow: 0 0 5px 0 #00000070;
+}
+
+.modal button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #047857;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5%;
+  position: relative;
+  top: 50%; left: 50%;
+  transform: translate(-50%);
+  transition: 0.25s ease;
+}
+.modal button:hover{
+  background-color: #10B981;
+  box-shadow: 0 0 5px 0 #00000070;
+}
+.LOGO{
+  text-align: center;
+}
+
+#comentario {
+  border-radius: 2px;
+}
