@@ -20,6 +20,7 @@
 
   /*navbar */
   nav{
+    position: fixed;
     background-color: rgb(255, 255, 255);
     border-bottom: .5px solid #58575727;
     display: flex;
@@ -54,6 +55,10 @@
     display: inline-block;
     padding: 0 10px;
     border-right: .5px solid #58575727;
+  }
+
+  #pesquisa{
+    border: none;
   }
 
   #home{
@@ -132,13 +137,18 @@
   }
   nav ul li a{
     font-weight: 300;
+    transition: 0.1s;
   }
   .form{
-    width: 180px !important;
     position: relative !important;
     border-radius: 30px !important;
-    left: 30px;
+    background: #fff !important;
+    width: 45vw !important;
+    margin-left: 35% !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
+  
   .checkbtn{
     display: block;
     float: right ;
@@ -149,9 +159,9 @@
     z-index: 5;
     position: absolute !important;
     width: 100%;
-    height: 22vh;
+    height: 32vh;
     background: #f2f2f2;
-    top: 50px;
+    top: 40px;
     left: -2000px;
     text-align: left;
     transition: all .5s;
@@ -162,18 +172,25 @@
     display: block;
     margin: 0px 0;
     line-height: 55px;
-    border: #f2f2f2 solid 3px;
+    border: none;
     transition: 0.5s;
     margin-left: 0px;
     cursor: pointer;
   }
+  .escolhas{
+    margin: 5px;
+  }
+  #pesquisa{
+    border-bottom: #00000034 0.05px solid;
+    margin-right: 5%;
+  }
   #home{
-    border: #f2f2f2 solid;
+    border: none;
   }
   nav ul li a{
     border-bottom: none;
   }
-  li:hover{
+  .escolhas:hover{
     background: #0478570e;
   }
   a:active, a:hover{
@@ -192,8 +209,13 @@
     row-gap: 100px !important;
   }
   .form{
-    width: 200px !important;
-    margin-left: 40px;
+    position: relative !important;
+    border-radius: 30px !important;
+    background: #fff !important;
+    width: 45vw !important;
+    margin-left: 35% !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   .checkbtn{
@@ -206,10 +228,10 @@
     z-index: 5;
     position: absolute !important;
     width: 100%;
-    height: 22vh;
+    height: 32vh;
     background: #f2f2f2;
-    top: 50px;
-    left: -1000px;
+    top: 40px;
+    left: -2000px;
     text-align: left;
     transition: all .5s;
     border-bottom: #00000052 solid .5px;
@@ -219,10 +241,17 @@
     display: block;
     margin: 0px 0;
     line-height: 55px;
-    border: #f2f2f2 solid 3px;
+    border: none;
     transition: 0.5s;
     margin-left: 0px;
     cursor: pointer;
+  }
+  .escolhas{
+    margin: 5px;
+  }
+  #pesquisa{
+    border-bottom: #00000034 0.05px solid;
+    margin-right: 5%;
   }
   #home{
     border: #f2f2f2 solid;
@@ -263,7 +292,13 @@
   }
   @media (max-width: 650px) {
     .form{
-      display: none;
+      position: relative !important;
+      border-radius: 30px !important;
+      background: #fff !important;
+      width: 45vw !important;
+      margin-left: 35% !important;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
     .geral h1{
       position: relative;
@@ -283,10 +318,10 @@
       z-index: 5;
       position: absolute !important;
       width: 100%;
-      height: 22vh;
+      height: 32vh;
       background: #f2f2f2;
-      top: 50px;
-      left: -1000px;
+      top: 40px;
+      left: -2000px;
       text-align: left;
       transition: all .5s;
       border-bottom: #00000052 solid .5px;
@@ -296,13 +331,20 @@
       display: block;
       margin: 0px 0;
       line-height: 55px;
-      border: #f2f2f2 solid 3px;
+      border: none;
       transition: 0.5s;
       margin-left: 0px;
       cursor: pointer;
     }
+    .escolhas{
+      margin: 5px;
+    }
+    #pesquisa{
+      border-bottom: #00000034 0.05px solid;
+      margin-right: 5%;
+    }
     #home{
-      border: #f2f2f2 solid;
+      border: none;
     }
     nav ul li a{
       border-bottom: none;
@@ -317,6 +359,9 @@
     }
     #check:checked ~ ul{
       left: 0;
+    }
+    .cards {
+      margin-left: 15%;
     }
   }
   /*Cards */
@@ -347,7 +392,7 @@
     transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
   }
 
-  .eng{
+  .pencil{
     width: 80px;
     height: 80px;
     position: absolute;
@@ -357,6 +402,7 @@
     transition: all 0.5s ease;
     cursor: pointer;
     padding: 10px;
+    border-radius: 10px;
   }
   
   .trash{
@@ -369,9 +415,10 @@
     transition: all 0.5s ease;
     cursor: pointer;
     padding: 10px;
+    border-radius: 10px;
   }
 
-  .eng:hover, .trash:hover{
+  .pencil:hover, .trash:hover{
     box-shadow: 0px 0px 10px 5px #00000075;
   }
 
@@ -435,7 +482,7 @@
     box-shadow: none;
   }
 
-  .card:hover .eng, .card:hover .trash{
+  .card:hover .pencil, .card:hover .trash{
     z-index: 4;
     transform: translateY(0%);
   }

@@ -20,6 +20,7 @@
 
   /*navbar */
   nav{
+    position: fixed;
     background-color: rgb(255, 255, 255);
     border-bottom: .5px solid #58575727;
     display: flex;
@@ -56,6 +57,10 @@
     border-right: .5px solid #58575727;
   }
 
+  #pesquisa{
+    border: none;
+  }
+
   #home{
     border-left: .5px solid #58575727;
   }
@@ -88,160 +93,184 @@
   #check{
     display: none;
   }
-  @media (max-width: 1400px){
+@media (max-width: 1400px){
 
-    .cards {
-      grid-template-columns: 350px 350px !important;
-      column-gap: 100px !important;
-      row-gap: 100px !important;
-    }
-    
-    .container-fluid{
-      display: flex !important;
-      justify-content: center!important;
-      align-items: center !important; 
-    }
-    nav .logo{
-      margin-right: 80px;
-      width: 250px;
-      height: 100%;
-    }
-    nav ul li a{
-      font-weight: 300;
-    }
-    .form{
-      width: 200px !important;
-      position: relative !important;
-      border-radius: 30px !important;
-      left: 40px;
-    }
+  .cards {
+    grid-template-columns: 350px 350px !important;
+    column-gap: 100px !important;
+    row-gap: 100px !important;
   }
   
-  @media (max-width: 1100px){
-  
-    .container-fluid{
-      display: flex !important;
-      justify-content: center!important;
-      align-items: center !important; 
-      flex-wrap: nowrap;
-    }
-    nav .logo{
-      margin-right: 60px;
-      width: 200px;
-      height: 80%;
-    }
-    nav ul li a{
-      font-weight: 300;
-    }
-    .form{
-      width: 180px !important;
-      position: relative !important;
-      border-radius: 30px !important;
-      left: 30px;
-    }
-    .checkbtn{
-      display: block;
-      float: right ;
-      margin-right: 40px;
-      line-height: 40px;
-    }
-    ul {
-      z-index: 5;
-      position: absolute !important;
-      width: 100%;
-      height: 22vh;
-      background: #f2f2f2;
-      top: 50px;
-      left: -2000px;
-      text-align: left;
-      transition: all .5s;
-      border-bottom: #00000052 solid .5px;
-      box-shadow: 0px 0px 5px 5px #00000010;
-    }
-    nav ul li {
-      display: block;
-      margin: 0px 0;
-      line-height: 55px;
-      border: #f2f2f2 solid 3px;
-      transition: 0.5s;
-      margin-left: 0px;
-      cursor: pointer;
-    }
-    #home{
-      border: #f2f2f2 solid;
-    }
-    nav ul li a{
-      border-bottom: none;
-    }
-    li:hover{
-      background: #0478570e;
-    }
-    a:active, a:hover{
-      z-index: 4;
-      background: none;
-      color: #047857;
-    }
-    #check:checked ~ ul{
-      left: 0;
-    }
+  .container-fluid{
+    display: flex !important;
+    justify-content: center!important;
+    align-items: center !important; 
   }
-  @media (max-width: 880px) {
-    .cards {
-      grid-template-columns: 350px !important;
-      column-gap: 100px !important;
-      row-gap: 100px !important;
-    }
-    .form{
-      width: 200px !important;
-      margin-left: 40px;
-    }
-    
-    .checkbtn{
-      display: block;
-      float: right ;
-      margin-right: 40px;
-      line-height: 40px;
-    }
-    ul {
-      z-index: 5;
-      position: absolute !important;
-      width: 100%;
-      height: 22vh;
-      background: #f2f2f2;
-      top: 50px;
-      left: -1000px;
-      text-align: left;
-      transition: all .5s;
-      border-bottom: #00000052 solid .5px;
-      box-shadow: 0px 0px 5px 5px #00000010;
-    }
-    nav ul li {
-      display: block;
-      margin: 0px 0;
-      line-height: 55px;
-      border: #f2f2f2 solid 3px;
-      transition: 0.5s;
-      margin-left: 0px;
-      cursor: pointer;
-    }
-    #home{
-      border: #f2f2f2 solid;
-    }
-    nav ul li a{
-      border-bottom: none;
-    }
-    li:hover{
-      background: #0478570e;
-    }
-    a:active, a:hover{
-      z-index: 4;
-      background: none;
-      color: #047857;
-    }
-    #check:checked ~ ul{
-      left: 0;
-    }
-    }
+  nav .logo{
+    margin-right: 80px;
+    width: 250px;
+    height: 100%;
+  }
+  nav ul li a{
+    font-weight: 300;
+  }
+  .form{
+    width: 200px !important;
+    position: relative !important;
+    border-radius: 30px !important;
+    left: 40px;
+  }
+}
+
+@media (max-width: 1100px){
+
+  .container-fluid{
+    display: flex !important;
+    justify-content: center!important;
+    align-items: center !important; 
+    flex-wrap: nowrap;
+  }
+  nav .logo{
+    margin-right: 60px;
+    width: 200px;
+    height: 80%;
+  }
+  nav ul li a{
+    font-weight: 300;
+    transition: 0.1s;
+  }
+  .form{
+    position: relative !important;
+    border-radius: 30px !important;
+    background: #fff !important;
+    width: 45vw !important;
+    margin-left: 35% !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .checkbtn{
+    display: block;
+    float: right ;
+    margin-right: 40px;
+    line-height: 40px;
+  }
+  ul {
+    z-index: 5;
+    position: absolute !important;
+    width: 100%;
+    height: 32vh;
+    background: #f2f2f2;
+    top: 40px;
+    left: -2000px;
+    text-align: left;
+    transition: all .5s;
+    border-bottom: #00000052 solid .5px;
+    box-shadow: 0px 0px 5px 5px #00000010;
+  }
+  nav ul li {
+    display: block;
+    margin: 0px 0;
+    line-height: 55px;
+    border: none;
+    transition: 0.5s;
+    margin-left: 0px;
+    cursor: pointer;
+  }
+  .escolhas{
+    margin: 5px;
+  }
+  #pesquisa{
+    border-bottom: #00000034 0.05px solid;
+    margin-right: 5%;
+  }
+  #home{
+    border: none;
+  }
+  nav ul li a{
+    border-bottom: none;
+  }
+  .escolhas:hover{
+    background: #0478570e;
+  }
+  a:active, a:hover{
+    z-index: 4;
+    background: none;
+    color: #047857;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+@media (max-width: 880px) {
+  .cards {
+    grid-template-columns: 350px !important;
+    column-gap: 100px !important;
+    row-gap: 100px !important;
+  }
+  .form{
+    position: relative !important;
+    border-radius: 30px !important;
+    background: #fff !important;
+    width: 45vw !important;
+    margin-left: 35% !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .checkbtn{
+    display: block;
+    float: right ;
+    margin-right: 40px;
+    line-height: 40px;
+  }
+  ul {
+    z-index: 5;
+    position: absolute !important;
+    width: 100%;
+    height: 32vh;
+    background: #f2f2f2;
+    top: 40px;
+    left: -2000px;
+    text-align: left;
+    transition: all .5s;
+    border-bottom: #00000052 solid .5px;
+    box-shadow: 0px 0px 5px 5px #00000010;
+  }
+  nav ul li {
+    display: block;
+    margin: 0px 0;
+    line-height: 55px;
+    border: none;
+    transition: 0.5s;
+    margin-left: 0px;
+    cursor: pointer;
+  }
+  .escolhas{
+    margin: 5px;
+  }
+  #pesquisa{
+    border-bottom: #00000034 0.05px solid;
+    margin-right: 5%;
+  }
+  #home{
+    border: #f2f2f2 solid;
+  }
+  nav ul li a{
+    border-bottom: none;
+  }
+  li:hover{
+    background: #0478570e;
+  }
+  a:active, a:hover{
+    z-index: 4;
+    background: none;
+    color: #047857;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+  }
   nav logo{
     margin-right: 1em ;
   }
@@ -254,13 +283,86 @@
     padding-top: 20px;
   }
   .geral h1{
-    font-family: 'Poppins';
-    font-style: sans-serif;
+    position: relative;
     font-weight: 600;
     font-size: 36px;
     line-height: 54px;
     color: #047857;
     text-shadow: 2px 3px 2px rgba(37, 44, 38, 0.103);
+  }
+  @media (max-width: 650px) {
+    .form{
+      position: relative !important;
+      border-radius: 30px !important;
+      background: #fff !important;
+      width: 45vw !important;
+      margin-left: 35% !important;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .geral h1{
+      position: relative;
+      font-weight: 600;
+      font-size: 27px;
+      line-height: 54px;
+      color: #047857;
+      text-shadow: 2px 3px 2px rgba(37, 44, 38, 0.103);
+    }
+    .checkbtn{
+      display: block;
+      float: right ;
+      margin-right: 40px;
+      line-height: 40px;
+    }
+    ul {
+      z-index: 5;
+      position: absolute !important;
+      width: 100%;
+      height: 32vh;
+      background: #f2f2f2;
+      top: 40px;
+      left: -2000px;
+      text-align: left;
+      transition: all .5s;
+      border-bottom: #00000052 solid .5px;
+      box-shadow: 0px 0px 5px 5px #00000010;
+    }
+    nav ul li {
+      display: block;
+      margin: 0px 0;
+      line-height: 55px;
+      border: none;
+      transition: 0.5s;
+      margin-left: 0px;
+      cursor: pointer;
+    }
+    .escolhas{
+      margin: 5px;
+    }
+    #pesquisa{
+      border-bottom: #00000034 0.05px solid;
+      margin-right: 5%;
+    }
+    #home{
+      border: none;
+    }
+    nav ul li a{
+      border-bottom: none;
+    }
+    li:hover{
+      background: #0478570e;
+    }
+    a:active, a:hover{
+      z-index: 4;
+      background: none;
+      color: #047857;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+    .cards {
+      margin-left: 15%;
+    }
   }
   /*Cards */
   .cards {
@@ -274,18 +376,8 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
-  
-  .cards button {
-    border: none;
-    cursor: pointer;
-    appearance: none;
-    padding: 5%;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px 5px #00000010;
-  }
 
-
+ 
   .card {
     position: relative;
     display: flex;
@@ -300,7 +392,7 @@
     transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
   }
 
-  .eng{
+  .pencil{
     width: 80px;
     height: 80px;
     position: absolute;
@@ -310,6 +402,7 @@
     transition: all 0.5s ease;
     cursor: pointer;
     padding: 10px;
+    border-radius: 10px;
   }
   
   .trash{
@@ -322,9 +415,10 @@
     transition: all 0.5s ease;
     cursor: pointer;
     padding: 10px;
+    border-radius: 10px;
   }
 
-  .eng:hover, .trash:hover{
+  .pencil:hover, .trash:hover{
     box-shadow: 0px 0px 10px 5px #00000075;
   }
 
@@ -388,7 +482,7 @@
     box-shadow: none;
   }
 
-  .card:hover .eng, .card:hover .trash{
+  .card:hover .pencil, .card:hover .trash{
     z-index: 4;
     transform: translateY(0%);
   }
@@ -418,4 +512,3 @@
     margin-bottom: 10%;
     padding-top: 70px;
    }
-
