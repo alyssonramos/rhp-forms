@@ -71,16 +71,22 @@
       <div class="container">
         <h2>Insira aqui o título</h2>
       </div>
-      <input type="text" name="nome" placeholder="Título" />
+      <input type="text" name="nome" placeholder="Título" value="Ressonância magnética" />
+      <!-- Adicione o valor desejado para o campo "Título" -->
+  
       <div class="informacoes">
         <h2>Deseja informações pessoais?</h2>
       </div>
       <div class="formulario">
-        <label> <input type="radio" name="resposta" value="sim" /> Sim </label>
-        <label> <input type="radio" name="resposta" value="nao" /> Não </label>
+        <label>
+          <input type="radio" name="resposta" value="sim" checked /> Sim
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="nao" /> Não
+        </label>
       </div>
     </div>
-
+  
     <div class="perguntas">
       <div class="container">
         <h2>Pergunta 1</h2>
@@ -90,6 +96,7 @@
         name="text"
         class="input"
         placeholder="Insira a pergunta:"
+        value="Tem claustrofobia?" 
       />
       <button onclick="adicionarFormulario(this)">Adicionar</button>
     </div>
