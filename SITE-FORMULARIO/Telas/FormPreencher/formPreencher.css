@@ -32,6 +32,12 @@
     .info{
       font-size: 40%;
     }
+    .dadosPaciente{
+      width: 50% !important;
+    }
+    .perguntas{
+      width: 50% !important;
+    }
   }
   .info h2 {
     border-right: #00000028 solid 0.5px;
@@ -199,17 +205,41 @@ input[type=text]:focus {
   overflow: hidden;
   
   transition: width 0.15s, height 0.15s;
+
+}
+.Top_card{
+  width: 100%;
+}
+.Top_card img {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-left: 33%;
+  width: 220px;
+  height: 220px;
 }
 
 .modal-show > .modal {
   width: 600px;
-  height: 370px;
+  height: 600px;
 }
 
 @media (max-width: 750px) {
   .modal-show > .modal {
     width: 400px;
-    height: 430px;
+    height: 500px;
+  }
+  .Top_card img {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30%;
+    width: 160px;
+    height: 160px;
+  }
+  .modal h1 {
+    text-align: center;
+    font-size: 25px;
   }
 }
 

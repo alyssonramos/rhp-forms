@@ -1,24 +1,16 @@
-function mostrarCampoTexto() {
-    var campoTexto = document.getElementById("campoTexto");
-    campoTexto.style.display = "block";
-  }
 
-  function ocultarCampoTexto() {
-    var campoTexto = document.getElementById("campoTexto");
-    campoTexto.style.display = "none";
-  }
-  
+window.onload = function() {
+  var radios = document.querySelectorAll('input[type=radio][name="resposta"]');
+  radios.forEach(radio => radio.addEventListener('change', verificarRadio));
+}
 
-  function mostrarCampoTexto() {
-    var campoTexto = document.getElementById('campoTexto');
-    campoTexto.style.display = "block";
-  }
+function verificarRadio() {
+  var formulario = this.closest('.formulario');
+  var campoTexto = formulario.querySelector('.campoTexto');
+  campoTexto.style.display = this.value === 'outro' && this.checked ? "block" : "none";
+}
 
-  function mostrarCampoTexto(radio) {
-    var campoTexto = radio.parentNode.nextElementSibling;
-    campoTexto.style.display = radio.checked ? "block" : "none";
-  }
-  
+
   const getElement = (...queries) => document.querySelector(...queries);
 
 const button = getElement('.nav-link');

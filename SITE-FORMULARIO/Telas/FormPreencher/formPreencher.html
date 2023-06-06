@@ -184,20 +184,30 @@
     </div>
     <form class="formulario">
         <label>
-          <input type="radio" name="resposta" value="sim"> Sim
+          <input type="radio" name="resposta" value="sim" > Sim
         </label>
         <label>
-          <input type="radio" name="resposta" value="nao"> Não
+          <input type="radio" name="resposta" value="nao" > Não
         </label>
         <label>
-          <input type="radio" name="resposta" value="outro" onclick="mostrarCampoTexto(this)"> Outro
+          <input type="radio" name="resposta" value="outro" > Outro
         </label>
         <div class="campoTexto" style="display: none;">
             <input type="text" name="text" class="input" placeholder="Qual?">
           </div>
     </form>
 </div>
+<div id="point">
+  <p>
+    .
+  </p>
+</div>
 
+<div id="point">
+  <p>
+    .
+  </p>
+</div>
 <div class="footer">
   <a class="nav-link">
   <button>Enviar formulário</button>
@@ -206,9 +216,15 @@
 
 <div class="modal-container">
   <div class="modal">
+    <div class="Top_card">
+    <img
+          src="../../images/LOGOTIPO_RHP_SEM_FUNDO_COM_ANO.PNG"
+          alt="Logomarca"
+        />
     <p>
       <h1>PESQUISA DE SATISFAÇÃO</h1>
     </p>
+  </div>
     <form>
       <label for="rating">Em uma escala de 0 a 10 o quanto voce recomendaria o Real Hospital Portugues a um amigo ou familiar:</label>
       <div class="rating">
@@ -239,7 +255,7 @@
   <label for="comentario">Comentários:</label>
   <textarea id="comentario" name="comentario"></textarea>
 
-  <a href="SITE-FORMULARIO/Telas/home/home.html">
+  <a href="../home/home.html">
     <button class="button">Enviar</button>
   </a>
 

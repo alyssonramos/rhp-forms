@@ -82,9 +82,15 @@
     </div>
 
     <div class="perguntas">
+      <div class="topoPergunta">
+        <input type="checkbox" id="checkX">
+        <label for="checkX" class="X" onclick="removerFormulario(this)">
+          <h3>X</h3>
+        </label>
       <div class="container">
         <h2>Pergunta 1</h2>
       </div>
+    </div>
       <input
         type="text"
         name="text"
@@ -92,6 +98,10 @@
         placeholder="Insira a pergunta:"
       />
       <button onclick="adicionarFormulario(this)">Adicionar</button>
+    </div>
+
+    <div id="containerFormularios">
+      <button id="botaoAdicionarCentral" onclick="adicionarFormulario(this)" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">Adicionar Formulário</button>
     </div>
 
     <div class="footer">
@@ -120,14 +130,14 @@
           <div class="vias">
           <p>
             <div class="whatsapp">
-            <a href="./../FormPreencher/formPreencher.html" class="btn btn-primary">
+            <a href="./../FormPreencher/formPreencher.html" class="btn btn-primary" target="_blank">
             <img src="../../images/whatsapp-icone-2.png" width="50%">
             </a>
             </div>
           </p>
           <p>
             <div class="gmail">
-              <a href="./../FormPreencher/formPreencher.html" class="btn btn-primary">
+              <a href="./../FormPreencher/formPreencher.html" class="btn btn-primary" target="_blank">
                 <img src="../../images/gmail.png" width="50%">
               </a>
             </div>

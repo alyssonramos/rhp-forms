@@ -1,18 +1,34 @@
 let contador = 2; // Inicia o contador em 2, já que a primeira pergunta já está presente
 
 function adicionarFormulario(botao) {
+
+  // Oculta o botão central de adicionar
+  
   // Obtém o elemento pai do botão clicado (div.perguntas)
   const divPerguntas = botao.parentNode;
 
+  // Obtém o container de formulários ou cria um novo caso não exista
+  let containerFormularios = document.getElementById('containerFormularios');
+  if (!containerFormularios) {
+    containerFormularios = document.createElement('div');
+    containerFormularios.id = 'containerFormularios';
+    document.body.appendChild(containerFormularios);
+  }
   // Cria uma nova div de perguntas
   const novaDivPerguntas = document.createElement("div");
   novaDivPerguntas.className = "perguntas";
 
   // Cria o conteúdo interno da nova div de perguntas
   const novoConteudo = `
-    <div class="container">
+      <div class="topoPergunta">
+        <input type="checkbox" id="checkX">
+        <label for="checkX" class="X" onclick="removerFormulario(this)">
+          <h3>X</h3>
+        </label>
+        <div class="container">
       <h2>Pergunta ${contador}</h2>
     </div>
+      </div>
     <input type="text" name="text" class="input" placeholder="Insira a pergunta:">
     <button onclick="adicionarFormulario(this)">Adicionar</button>
   `;
@@ -24,6 +40,28 @@ function adicionarFormulario(botao) {
   divPerguntas.parentNode.insertBefore(novaDivPerguntas, divPerguntas.nextSibling);
 
   contador++; // Incrementa o contador para a próxima pergunta
+
+  document.getElementById('botaoAdicionarCentral').style.display = 'none';
+}
+
+function removerFormulario(label) {
+  // Obtém o elemento pai do label clicado (div.topoPergunta)
+  const divTopoPergunta = label.parentNode;
+  // Obtém o elemento avô do label clicado (div.perguntas)
+  const divPerguntas = divTopoPergunta.parentNode;
+
+  // Remove a div de perguntas
+  divPerguntas.parentNode.removeChild(divPerguntas);
+ // Chama a função de verificação
+  verificarFormularios();
+}
+
+function verificarFormularios() {
+  // Verifica se há algum elemento com a classe 'perguntas' na página
+  if (document.getElementsByClassName('perguntas').length === 0) {
+    // Se não houver, mostra o botão central de adicionar
+    document.getElementById('botaoAdicionarCentral').style.display = 'block';
+  }
 }
 
 const getElement = (...queries) => document.querySelector(...queries);
