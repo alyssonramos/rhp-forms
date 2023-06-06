@@ -1,81 +1,73 @@
-function mostrarCampoTexto() {
-    var campoTexto = document.getElementById("campoTexto");
-    campoTexto.style.display = "block";
-  }
-
-  function ocultarCampoTexto() {
-    var campoTexto = document.getElementById("campoTexto");
-    campoTexto.style.display = "none";
-  }
-  
-
-  function mostrarCampoTexto() {
-    var campoTexto = document.getElementById('campoTexto');
-    campoTexto.style.display = "block";
-  }
-
-  function mostrarCampoTexto(radio) {
-    var campoTexto = radio.parentNode.nextElementSibling;
-    campoTexto.style.display = radio.checked ? "block" : "none";
-  }
-  
-  const getElement = (...queries) => document.querySelector(...queries);
-
-const button = getElement('.nav-link');
-const container = getElement('.modal-container');
-const modal = getElement('.modal');
-
+// Variáveis globais
+const campoTexto = document.getElementById('campoTexto');
+const button = document.querySelector('.nav-link');
+const container = document.querySelector('.modal-container');
+const modal = document.querySelector('.modal');
+const camposTexto = document.querySelectorAll('.campoTexto input[type="text"]');
+const respostas = document.querySelectorAll('input[type="radio"]:checked');
 const activeModalClass = 'modal-show';
 
-const openModal = () => container.classList.add(activeModalClass);
-const closeModal = () => container.classList.remove(activeModalClass);
-
-button.addEventListener('click', openModal);
-container.addEventListener('click', (event) => {
-	if (modal.contains(event.target)) return;
-	
-	closeModal();
-});
-
-// Função para mostrar/ocultar campo de texto
+// Função para mostrar campo de texto
 function mostrarCampoTexto(elemento) {
-  var campoTexto = elemento.parentNode.nextElementSibling;
-  if (elemento.value === 'outro') {
-    campoTexto.style.display = 'block';
-  } else {
-    campoTexto.style.display = 'none';
-  }
+  const campoTexto = elemento.parentNode.nextElementSibling;
+  campoTexto.style.display = elemento.value === 'outro' ? 'block' : 'none';
 }
+
+// Função para abrir o modal
+function openModal() {
+  container.classList.add(activeModalClass);
+}
+
+// Função para fechar o modal
+function closeModal() {
+  container.classList.remove(activeModalClass);
+}
+
+// Event listener para abrir o modal
+button.addEventListener('click', openModal);
+
+// Event listener para fechar o modal
+container.addEventListener('click', (event) => {
+  if (!modal.contains(event.target)) {
+    closeModal();
+  }
+});
 
 // Função para validar o formulário
 function validarFormulario() {
-  // Obtém todos os campos de texto do formulário
-  var camposTexto = document.querySelectorAll('.campoTexto input[type="text"]');
+  if (!validarCamposTexto() || !validarRespostas()) {
+    return false;
+  }
 
-  // Verifica se algum campo de texto obrigatório está vazio
-  for (var i = 0; i < camposTexto.length; i++) {
-    var campo = camposTexto[i];
+  exibirDadosFormulario();
+  return true;
+}
+
+// Função para validar campos de texto
+function validarCamposTexto() {
+  for (const campo of camposTexto) {
     if (campo.value === '' && campo.hasAttribute('required')) {
       alert('Por favor, preencha todos os campos obrigatórios!');
       return false;
     }
   }
+  return true;
+}
 
-  // Obtém todas as respostas dos campos de rádio
-  var respostas = document.querySelectorAll('input[type="radio"]:checked');
-
-  // Verifica se alguma pergunta não foi respondida
+// Função para validar respostas de rádio
+function validarRespostas() {
   if (respostas.length !== 7) {
     alert('Por favor, responda todas as perguntas!');
     return false;
   }
-
-  // Exibe os dados do formulário (apenas para fins de demonstração)
-  exibirDadosFormulario();
-
-  // Retorna true para permitir o envio do formulário
   return true;
 }
+
+// Função para exibir dados do formulário
+function exibirDadosFormulario() {
+  // Implemente o código para exibir os dados do formulário aqui
+}
+
 
 // Função para exibir os dados do formulário
 function exibirDadosFormulario() {
