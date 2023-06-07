@@ -64,6 +64,28 @@ function verificarFormularios() {
   }
 }
 
+//Copiar link
+var copyBtn = document.querySelector('.copyBtn');
+var tooltip = document.getElementById('myTooltip');
+
+copyBtn.onclick = function(event) {
+  event.preventDefault();
+  
+  var textToCopy = 'https://rhp-forms.vercel.app/SITE-FORMULARIO/Telas/FormPreencher/formPreencher.html';
+  navigator.clipboard.writeText(textToCopy).then(function() {
+    /* ClipBoard successfully overwritten */
+    tooltip.innerHTML = "Texto copiado!";
+  }, function() {
+    /* ClipBoard write failed */
+    tooltip.innerHTML = "Falha ao copiar texto!";
+  });
+}
+
+copyBtn.onmouseleave = function(event) {
+  tooltip.innerHTML = "Copiar para a área de transferência";
+}
+
+//Modal
 const getElement = (...queries) => document.querySelector(...queries);
 
 const button = getElement('.nav-link');
