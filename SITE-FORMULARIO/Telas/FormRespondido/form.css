@@ -115,7 +115,7 @@
   .container {
     text-align: center;
   }
-  .X:hover{
+  .X:active, .X:hover{
     color: #047857;
   }
 
