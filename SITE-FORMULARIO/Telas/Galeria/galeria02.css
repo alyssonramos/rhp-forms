@@ -214,8 +214,8 @@
     position: relative !important;
     border-radius: 30px !important;
     background: #fff !important;
-    width: 45vw !important;
-    margin-left: 35% !important;
+    width: 42vw !important;
+    margin-left: 30% !important;
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -299,7 +299,7 @@
       border-radius: 30px !important;
       background: #fff !important;
       width: 45vw !important;
-      margin-left: 35% !important;
+      margin-left: 30% !important;
       margin-top: 20px;
       margin-bottom: 20px;
     }
@@ -337,7 +337,6 @@
       border: none;
       transition: 0.5s;
       margin-left: 0px;
-      
     }
     .escolhas{
       margin: 5px;
