@@ -33,10 +33,14 @@
       font-size: 40%;
     }
     .dadosPaciente{
-      width: 65% !important;
+      width: 70% !important;
+      font-size: 12px;
     }
     .perguntas{
-      width: 65% !important;
+      width: 70% !important;
+    }
+    .container{
+      font-size: 12px;
     }
   }
   .info h2 {

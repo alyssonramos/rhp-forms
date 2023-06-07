@@ -259,9 +259,12 @@
     }
     .dadosPaciente{
       width: 50% !important;
+      font-size: 12px;
     }
+    
     .perguntas{
       width: 50% !important;
+      font-size: 12px;
     }
     .X{
       font-size: 15px;
