@@ -85,6 +85,7 @@ copyBtn.onmouseleave = function(event) {
   tooltip.innerHTML = "Copiar para a área de transferência";
 }
 
+//Modal
 
 const getElement = (...queries) => document.querySelector(...queries);
 

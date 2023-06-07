@@ -258,12 +258,15 @@
       left: 0;
     }
     .dadosPaciente{
-      width: 50% !important;
+      width: 70% !important;
       font-size: 12px;
     }
-    
+    .formulario{
+      margin-top: 3%;
+      font-size: 15px;
+    }
     .perguntas{
-      width: 50% !important;
+      width: 70% !important;
       font-size: 12px;
     }
     .X{
